@@ -1,6 +1,6 @@
 # Kubernetes Dashboard deploy using Nodeport
 
-This example shows how to set up the dashboard using a custom NodePort In the kubernetes[k8s] environment. 
+This example shows how to set up the dashboard[1] using a custom NodePort In the kubernetes[k8s] environment. 
 The k8s dashboard allows you to view and orchestrate container pool status information.
 
 
@@ -43,46 +43,6 @@ check-access-by-dashboardadmin.sh
 get-dashboard-token.sh
 ```
 
-
-#### Request restful API & Response
-```shell
-curl -X POST http://localhost:8080/youtube-dl/rest \
-  -d '{
-	"url":"https://thisisdown.com/xxx",
-	"resolution":"best", 
-	"id":"iamgroot",
-	"pw":"1234"
-}'
-```
-```shell
-{
-    "success": true,
-    "msg": "download has started",
-    "Remaining downloading count": "7"
-}
-```
-
- If you want to get into docker container os, excute this command `[1]` :
-```console
-docker exec -i -t youtube-dl /bin/bash
-```
-
-##### Example, when using synology docker provisioning platform
-
-- docker volume mount setting 
-
-![screenshot1](https://github.com/hyeonsangjeon/youtube-dl-nas/blob/master/pic/volume_set_synology.png?raw=true)
-
-
-
-- ID, Password setting to docker environment
-![screenshot1](https://github.com/hyeonsangjeon/youtube-dl-nas/blob/master/pic/id_pw_set_synology.png?raw=true)
-
 ### Reference
-[1]: https://github.com/hyeonsangjeon/youtube-dl-nas/blob/master/pic/youtube-dl-server-login.png
-[2]: https://github.com/hyeonsangjeon/youtube-dl-nas/blob/master/pic/youtube-dl-server.png
-[3]: https://github.com/hyeonsangjeon/youtube-dl-nas/blob/master/pic/volume_set_synology.png
-[4]: https://github.com/hyeonsangjeon/youtube-dl-nas/blob/master/pic/id_pw_set_synology.png
-
-`[1]`. https://docs.docker.com/engine/reference/commandline/cli/#environment-variables
+`[1]`. https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 
