@@ -82,6 +82,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+*.tar
 
 # External tool builders
 .externalToolBuilders/
